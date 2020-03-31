@@ -91,7 +91,10 @@ public class EjercicioLambdas {
     	List<String> lista = Arrays.asList("1","2","3","4","5","6","7","8","9");
     	
     	// TODO Código
-    	
+    	int res = lista.stream()
+        .mapToInt(Integer::parseInt)
+        .sum();
+    	System.out.println(res);
     }
     
 	/**
@@ -103,7 +106,7 @@ public class EjercicioLambdas {
         		"Edgar","Jesús","Sebastian", "Sion", "Anna", "Christian"
         );
 		//TODO Código
-		
+		list.stream().filter( (s)-> s.contains("A") ).forEach(System.out::println);
 	}
 	
     
