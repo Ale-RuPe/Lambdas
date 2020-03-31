@@ -25,7 +25,7 @@ public class LambdaSwing extends JFrame {
             }
         });
  
-//        button.addActionListener(e -> text.append("Prueba de lambda!\n"));
+
  
         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
