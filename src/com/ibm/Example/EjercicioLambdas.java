@@ -39,15 +39,12 @@ public class EjercicioLambdas {
 			}
 		});
 
-		//TODO código
-		devs.sort(  (Developer dev1, Developer dev2) -> {return dev1.getAge().compareTo(dev2.getAge());});
-		devs.sort(  (dev1, dev2) -> {return dev1.getAge().compareTo(dev2.getAge());} );
+		//TODO código Tarea
+		//Por edad
 		devs.sort(  (dev1, dev2) ->  dev1.getAge().compareTo(dev2.getAge()) );
 		
 		System.out.println("After sort");
-		for (Developer developer: devs) {
-			System.out.println(developer);
-		}
+		devs.forEach(System.out::println);
 		
 	}
 	
@@ -61,8 +58,8 @@ public class EjercicioLambdas {
         		"Había una vez un ","oso que ", "le gustab", "a est","Ar ","Tod","o el ",
         		"día haciend","o la traga","sion ", ":ggg:", ")\n"
         );
-        // TODO Código
-        list.forEach( s -> System.out.print(s) );
+        // TODO Código Tarea
+        list.forEach( System.out::print );
         
         list.forEach( palabra -> System.out.print(palabra.charAt(0)) );
     }
@@ -76,8 +73,10 @@ public class EjercicioLambdas {
         		"Carlos","Alejandro", "Miguel", "Adriana","Raúl","Angelica",
         		"Edgar","Jesús","Sebastian", "Sion", "Anna", "Christian"
         );
-        // TODO Código
-        list.forEach( (s) -> {s=s.toUpperCase(); System.out.println(s);} );
+        // TODO Código Tarea
+        list.stream()
+        .map(String::toUpperCase)
+        .forEach(System.out::println);
     }
     
 
@@ -90,11 +89,9 @@ public class EjercicioLambdas {
     private void ejercicioT1() {
     	List<String> lista = Arrays.asList("1","2","3","4","5","6","7","8","9");
     	
-    	// TODO Código
-    	int res = lista.stream()
-        .mapToInt(Integer::parseInt)
-        .sum();
-    	System.out.println(res);
+    	// TODO Código Tarea
+    	int res = lista.stream().mapToInt(Integer::parseInt).sum();
+    	System.out.println("Suma = " + res);
     }
     
 	/**
@@ -105,8 +102,10 @@ public class EjercicioLambdas {
         		"Carlos","Alejandro", "Miguel", "Adriana","Raúl","Angelica",
         		"Edgar","Jesús","Sebastian", "Sion", "Anna", "Christian"
         );
-		//TODO Código
-		list.stream().filter( (s)-> s.contains("A") ).forEach(System.out::println);
+		//TODO Código Tarea
+		list.stream()
+		.filter( s -> s.contains("A"))
+		.forEach(System.out::println);
 	}
 	
     
